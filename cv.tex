@@ -1,0 +1,176 @@
+%% start of file `template.tex'.
+
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+% \renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+% \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% \usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+% \setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Andrea}{Imparato}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+% \address{Italy}{Vicenza}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{}                   % optional, remove / comment the line if not wanted
+% \homepage{http://p1mps.github.io}
+% optional, remove / comment the line if not wanted
+% / comment the line if not wanted
+
+\photo[64pt][0.4pt]{picture2.png}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Knowledge discovery, software engineering and hacking}
+% optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+% \makeatletter
+% \renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+% \makeatother
+% \renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+% \usepackage{multibib}
+% \newcites{book,misc}{{Books},{Others}}
+% ----------------------------------------------------------------------------------
+% content
+% ----------------------------------------------------------------------------------
+\begin{document}
+% \begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%   -----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+
+\section{Personal Details}
+\cventry{Nationality}{}{}{}{Italian}{}
+\cventry{Date of birth}{}{}{}{20 March 1985}{}
+\cventry{Age}{}{}{}{33}{}
+\cventry{Place of birth}{}{}{}{Vicenza, Italy}{}
+\cventry{Marital Status}{}{}{}{Single}{}
+\cventry{Email}{}{}{}{imparato.andrea@gmail.com}{}
+\cventry{Phone Number}{}{}{}{+49 176 47678472}{}
+\cventry{Address}{}{}{}{Berlin, Nazarethkirchstraße 38}{}
+\cventry{Availability}{}{}{}{3 Months notice}{}
+\cventry{Personal Website}{}{}{}{\href{http://p1mps.github.io}{http://p1mps.github.io}}{}
+
+
+% optional, remove / comment the line if not wanted
+
+
+\section{Professional Experience}
+% \cventry{year--year}{Job title}{Employer}{City}{}{Description}
+\cventry{\small Jun 2018--Now}{Senior Software Engineer}{Dunnhumby
+  ltd}{Berlin}{}{
+\begin{itemize}
+\item Maintenance and improvement of the serverless backend system of a mobile app
+\item Use of google cloud technologies
+\end{itemize}
+}
+
+\cventry{\small Ago 2015--Jun 2018}{Php Web Api Developer}{Sociomantic Labs
+  GMBH}{Berlin}{}
+{Member of the api team which had tasks for: 
+\begin{itemize}
+\item Maintaining and documenting the internal web api with more than 100 endpoints
+\item Modernization of the in-house framework: ORM replacement, dependency
+  injection, restructuring of the software architecture 
+\item Technical and not technical requirements collection for the implementation
+  of new features
+\item Splitting of the legacy monolithic application in more maintainable
+  and focused micro-services
+\end{itemize}}
+
+\cventry{\small Nov 2014--Now}{Full Stack Developer}{Webco srl}{Vicenza}{}
+{Full Stack web applications with
+  \textbf{Laravel Framework} and PHP CMS:
+  \begin{itemize}
+  \item http://www.ricambi.guru: \textbf{Magento Ecommerce} with a custom search engine
+    based on MongoDB.
+  \item http://www.easyearth.travel: travels' ecommerce with \textbf{social features}
+  \item earthbox: a custom CMS to manage various frontend sites and
+    customer's data
+  \item price miner: web scraping with \textbf{price analysis} purposes
+  \end{itemize}}
+
+
+\cventry{\small Jan 2014--Oct 2014}{Lead Team Developer}{Shellrent
+  srl}{Vicenza}{}{Team lead position. Maintaining and
+  expanding a web hosting and cloud services \textbf{management
+    software}.}
+\cventry{\small Jul 2013--Dec 2013}{Developer}{Cybrain
+  srl}{Vicenza}{}{Graph algorithm implementation for business
+  analytics built as a \textbf{C++} \textbf{NodeJS} module.}
+\cventry{\small Nov 2010--Jan 2011}{Developer}{Epress
+  srl}{Milan}{}{\textbf{XSLT} developer: writing XSLT scripts for parsing
+html files that were imported into a \textbf{Apache SOLR} database}
+\cventry{\small Jan 2009--Sept 2010}{Developer}{Kasato
+  srl}{Padua}{}{System administrator and Backend Developer for a
+  \textbf{django} website: http:://www.funeras.it}
+
+% Detailed achievements:%
+\section{Education}
+\cventry{\small 2009--2013}{Computer Science Master Degree - Artificial
+  Intelligence curriculum}{University of
+  Padua}{Padua}{\textit{101/110}}{Courses:
+  \begin{itemize}
+  \item Artificial Intelligence
+  \item Machine Learning
+  \item Data mining
+  \item Operational Research
+  \item Constraints systems
+  \item Temporal Reasoning
+  \item Wireless networks
+  \item Computability and algorithms
+  \item Web Technologies
+  \item Computer graphics
+  \item Bioinformatics
+  \item Programming Languages\\
+  \end{itemize}
+  Some of the projects I worked on during the university:
+  \begin{itemize}
+  \item A Prolog based port scanning analyzer with \textbf{Java Technologies}
+  \item Wifi spectrum analyzer with custom wifi firmware device, the parser and the gui have been developed with \textbf{Python}
+  \item An all difference constraints resolver with \textbf{Java}
+  \item An optimizer for master-slave configuration problems with \textbf{C++} and the \textbf{ampl} library
+    \item I worked with a team of other 6 students to develop a
+      clock-in, clock-out analyzer with \textbf{Spring Framework}, \textbf{Hibernate},
+      \textbf{Gigaspace} and \textbf{Drools} technologies.
+  \end{itemize}}  % arguments 3 to 6 can be left empty
+
+
+%% \cventry{\small 2004--2009}{Computer Science Bachelor Degree}{University of
+%%   Padua}{Padua}{\textit{90/110}}{Study of the main software
+%%   engineering topics, computer science in general and math. Study of various programming languages such as C,C++,Java.}
+
+\section{Master thesis}
+\cvitem{title}{\emph{Interactive Subgroup Discovery}}
+\cvitem{supervisor}{Arno Knobbe - \textbf{Leiden University}}
+\cvitem{description}{I developed a novel interactive method to discover
+  statistical interesting subgroups in data.}
+
+
+\section{Language Skills}
+\cvitemwithcomment{German}{A1}{Basic Understanding}
+\cvitemwithcomment{English}{B2}{Proficiency in writing and reading}
+\cvitemwithcomment{Italian}{C2}{Mother Language}
+
+\end{document}
+
+
+%% end of file `template.tex'.
