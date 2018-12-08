@@ -19,6 +19,19 @@
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 
 % \usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage{xpatch}
+\xpatchcmd\cventry{,}{}{}{}
+\newcommand*{\cventrynocomma}[7][.25em]{%
+  \cvitem[#1]{#2}{%
+    {\bfseries#3}%
+    \ifthenelse{\equal{#4}{}}{}{ {\slshape#4}}%
+    \ifthenelse{\equal{#5}{}}{}{ #5}%
+    \ifthenelse{\equal{#6}{}}{}{ #6}%
+    \strut%
+    \ifx&#7&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+
+
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -58,16 +71,15 @@
 
 
 \section{Personal Details}
-\cventry{Nationality}{}{}{}{Italian}{}
-\cventry{Date of birth}{}{}{}{20 March 1985}{}
-\cventry{Age}{}{}{}{33}{}
-\cventry{Place of birth}{}{}{}{Vicenza, Italy}{}
-\cventry{Marital Status}{}{}{}{Single}{}
-\cventry{Email}{}{}{}{imparato.andrea@gmail.com}{}
-\cventry{Phone Number}{}{}{}{+49 176 47678472}{}
-\cventry{Address}{}{}{}{Berlin, Nazarethkirchstraße 38}{}
-\cventry{Availability}{}{}{}{3 Months notice}{}
-\cventry{Personal Website}{}{}{}{\href{http://p1mps.github.io}{http://p1mps.github.io}}{}
+\cventrynocomma{Date of birth}{}{}{}{20 March 1985}{}
+\cventrynocomma{Age}{}{}{}{33}{}
+\cventrynocomma{Place of birth}{}{}{}{Vicenza, Italy}{}
+\cventrynocomma{Marital Status}{}{}{}{Single}{}
+\cventrynocomma{Email}{}{}{}{imparato.andrea@gmail.com}{}
+\cventrynocomma{Phone Number}{}{}{}{+49 176 47678472}{}
+\cventrynocomma{Address}{}{}{}{Berlin, Wilhelmstraße 48}{}
+\cventrynocomma{Availability}{}{}{}{3 Months notice}{}
+\cventrynocomma{Personal Website}{}{}{}{\href{http://p1mps.github.io}{http://p1mps.github.io}}{}
 
 
 % optional, remove / comment the line if not wanted
@@ -78,20 +90,20 @@
 \cventry{\small Jun 2018--Now}{Senior Software Engineer}{Dunnhumby
   ltd}{Berlin}{}{
 \begin{itemize}
-\item Maintenance and improvement of the \textbf{serverless} backend system of a mobile app
+\item Maintenance and improvement of a \textbf{serverless} backend system for a mobile app
 \end{itemize}
 }
 
-\cventry{\small Ago 2015--Jun 2018}{Php Web Api Developer}{Sociomantic Labs
+\cventry{\small Ago 2015--Jun 2018}{Web Api Developer}{Sociomantic Labs
   GMBH}{Berlin}{}
 {
 \begin{itemize}
-\item Maintenance and documentation of the internal web api 
+\item Maintenance and documentation of the internal web api written in \textbf{PHP}
 \item Modernization of the in-house framework: \textbf{ORM replacement}, \textbf{dependency
-  injection}, restructuring of the software architecture 
-\item Technical and not technical requirements collection 
-\item Rewrite of the legacy monolithic application in more maintainable
-  and focused system based on micro-services 
+  injection}, restructuring of the software architecture
+\item Technical and non-technical requirements collection
+\item Refactoring of the legacy monolithic application in a more maintainable
+  and focused system based on micro-services
 \end{itemize}}
 
 \cventry{\small Nov 2014--Now}{Full Stack Developer}{Webco srl}{Vicenza}{}
